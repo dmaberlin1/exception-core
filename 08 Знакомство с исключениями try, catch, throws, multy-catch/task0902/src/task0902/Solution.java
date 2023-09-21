@@ -17,27 +17,36 @@ public class Solution {
         method1();
     }
 
-    public static String method1() {
+    public static StackTraceElement[] method1() {
         method2();
-        //напишите тут ваш код
+        return Thread.currentThread().getStackTrace();
+
+
     }
 
-    public static String method2() {
+    public static StackTraceElement[] method2() {
         method3();
-        //напишите тут ваш код
+       return Thread.currentThread().getStackTrace();
+
     }
 
-    public static String method3() {
+    public static StackTraceElement[] method3() {
         method4();
-        //напишите тут ваш код
+        return Thread.currentThread().getStackTrace();
     }
 
-    public static String method4() {
+    public static StackTraceElement[] method4() {
         method5();
-        //напишите тут ваш код
+        return Thread.currentThread().getStackTrace();
     }
 
-    public static String method5() {
-        //напишите тут ваш код
+    //change return - String to void
+    public static void method5() {
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        for (StackTraceElement elem : stackTraceElements) {
+            System.out.print(elem.getLineNumber()+" ");
+            System.out.println(elem.getMethodName());
+        }
+
     }
 }

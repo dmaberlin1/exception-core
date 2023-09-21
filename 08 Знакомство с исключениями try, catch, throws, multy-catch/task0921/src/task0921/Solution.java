@@ -1,8 +1,10 @@
 package task0921;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /* 
@@ -10,7 +12,8 @@ import java.util.List;
 Написать программу, которая будет вводить числа с клавиатуры.
 Код по чтению чисел с клавиатуры должен быть в методе readData.
 Код внутри readData обернуть в try..catch.
-Если пользователь ввёл какой-то текст, вместо ввода числа, то метод должен перехватить исключение и вывести на экран все ранее введенные числа в качестве результата.
+Если пользователь ввёл какой-то текст, вместо ввода числа, то метод должен перехватить исключение и вывести на экран
+ все ранее введенные числа в качестве результата.
 Числа выводить с новой строки сохраняя порядок ввода.
 
 
@@ -27,6 +30,32 @@ public class Solution {
     }
 
     public static void readData() {
-        //напишите тут ваш код
+        List<Integer> list = null;
+        try {
+            var reader = new BufferedReader(new InputStreamReader(System.in));
+            list = new LinkedList<>();
+            System.out.println("введите данные, для остановки введите -1");
+            while (true) {
+                if (Integer.valueOf(reader.readLine()).equals(-1)) {
+                    break;
+                }
+                list.add(Integer.valueOf(reader.readLine()));
+            }
+
+        } catch (NumberFormatException | IOException ioException) {
+            assert list != null;
+            for (Integer i : list) {
+                System.out.print("все ранее введенные числа "+ i+" ");
+            }
+            System.out.println();
+            System.err.println(ioException);
+        }finally {
+            assert list != null;
+            for (Integer i : list) {
+                System.out.print("все ранее введенные числа из finally " + i+" ");
+            }
+        }
     }
+
+
 }

@@ -33,11 +33,28 @@ public class Solution {
     public static StatelessBean BEAN = new StatelessBean();
 
     public static void main(String[] args) {
-        handleExceptions();
+       try {
+           handleExceptions();
+       }
+       catch (IOException ioException){
+           System.out.println("print System.err");
+           System.err.println(ioException);
+       }
     }
 
-    public static void handleExceptions() {
-        BEAN.methodThrowExceptions();
+    public static void handleExceptions() throws IOException {
+            try {
+                BEAN.methodThrowExceptions();
+            } catch (CharConversionException | FileSystemException e){
+                System.out.println("print System.err from cath  (CharConversionException | FileSystemException e)");
+
+                System.err.println(e);
+            }catch (IOException exception){
+                throw exception;
+            }
+
+
+
     }
 
     public static class StatelessBean {

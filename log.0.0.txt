@@ -1,0 +1,46 @@
+Sept 20, 2023 3:45:19 PM Main0940 main
+INFO: Начало main, создаем лист с типизацией Integers
+Sept 20, 2023 3:45:19 PM Main0940 main
+INFO: присваиваем лист Integers листу без типипзации
+Sept 20, 2023 3:45:19 PM Main0940 main
+INFO: присваиваем лист без типипзации листу строк
+Sept 20, 2023 3:45:19 PM Main0940 main
+WARNING: добавляем строку "бла бла" в наш переприсвоенный лист, возможна ошибка
+Sept 20, 2023 3:45:19 PM Main0940 main
+WARNING: добавляем строку "бла 23" в наш переприсвоенный лист, возможна ошибка
+Sept 20, 2023 3:45:19 PM Main0940 main
+WARNING: добавляем строку "бла 34" в наш переприсвоенный лист, возможна ошибка
+Sept 20, 2023 3:45:19 PM Main0940 main
+INFO: выводим все элементы листа с типизацией Integers в консоль
+Sept 20, 2023 3:45:19 PM Main0940 main
+INFO: Размер равен 3
+Sept 20, 2023 3:45:19 PM Main0940 main
+INFO: Получим первый элемент
+Sept 20, 2023 3:45:19 PM Main0940 main
+WARNING: что-то пошло не так
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+	at Main0940.main(Main0940.java:72)
+
+Sept 21, 2023 11:11:36 AM Main0940 logging
+WARNING: что-то пошло не так
+java.lang.ArithmeticException: / by zero
+	at Main0940.numToZero(Main0940.java:99)
+	at Main0940.logging(Main0940.java:53)
+	at Main0940.main(Main0940.java:48)
+
+Sept 21, 2023 1:58:23 PM AutoCloseableResourcesFirst <init>
+INFO: Вызов конструктора -> AutoCloseableResources_First
+Sept 21, 2023 1:58:23 PM AutoCloseableResourcesSecond <init>
+INFO: Вызов конструктора -> AutoCloseableResources_Second
+Sept 21, 2023 1:58:23 PM AutoCloseableResourcesFirst doSomething
+INFO: Какой то метод -> AutoCloseableResources_First
+Sept 21, 2023 1:58:23 PM AutoCloseableResourcesFirst close
+INFO: ЗАКРЫВАЕМ ресурс -> AutoCloseableResources_First
+Sept 21, 2023 1:58:23 PM AutoCloseableResourcesSecond doSomething
+INFO: Какой то метод -> AutoCloseableResources_Second
+Sept 21, 2023 1:58:23 PM AutoCloseableResourcesSecond close
+INFO: ЗАКРЫВАЕМ ресурс -> AutoCloseableResources_Second
+Sept 21, 2023 1:58:23 PM AutoCloseableResourcesSecond close
+INFO: ЗАКРЫВАЕМ ресурс -> AutoCloseableResources_Second
+Sept 21, 2023 1:58:23 PM AutoCloseableResourcesFirst close
+INFO: ЗАКРЫВАЕМ ресурс -> AutoCloseableResources_First

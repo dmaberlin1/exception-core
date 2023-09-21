@@ -21,9 +21,14 @@ public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
 
-        HashMap<String, String> map = new HashMap<String, String>(null);
-        map.put(null, null);
-        map.remove(null);
+        try {
+            HashMap<String, String> map = new HashMap<>(null);
+            map.put(null, null);
+            map.remove(null);
+
+        }catch (NullPointerException e){
+            System.err.println(e);
+        }
 
         //напишите тут ваш код
     }

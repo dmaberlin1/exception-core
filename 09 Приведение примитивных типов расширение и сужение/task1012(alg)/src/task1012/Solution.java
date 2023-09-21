@@ -28,7 +28,7 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        var reader = new BufferedReader(new InputStreamReader(System.in));
 
         // Алфавит
         List<Character> alphabet = Arrays.asList(
@@ -45,5 +45,16 @@ public class Solution {
         }
 
         // напишите тут ваш код
+        for (Character character : alphabet) {
+            int num = 0;
+            for (String string : list) {
+                for (int i = 0; i < string.length(); i++) {
+                    if (string.charAt(i) == character) {
+                        num++;
+                    }
+                }
+            }
+            System.out.println(character+" "+ num);
+        }
     }
 }

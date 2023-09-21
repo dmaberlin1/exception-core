@@ -20,8 +20,8 @@ Requirements:
 public class Solution {
     public static void main(String[] args) {
         short number = 9;
-        char zero = '0';
-        int nine = (zero + number);
+        char zero ='0';
+        int nine = Integer.parseInt((String.valueOf(zero) + number));
         System.out.println(nine);
     }
 }

@@ -17,9 +17,13 @@ Requirements:
 public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
+        try {
+            int num = Integer.parseInt("XYZ");
+            System.out.println(num);
 
-        int num = Integer.parseInt("XYZ");
-        System.out.println(num);
+        }catch (NumberFormatException exception){
+            System.err.println(exception);
+        }
 
         //напишите тут ваш код
     }
